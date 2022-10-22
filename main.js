@@ -25,7 +25,6 @@ option = {
 const observer = new IntersectionObserver(function (entries, observer) {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
-            console.log(entry.isIntersecting);
             document.querySelector('.title21').classList.add('slidefromside');
             observer.unobserve(entry.target);
         }
@@ -34,6 +33,7 @@ const observer = new IntersectionObserver(function (entries, observer) {
 }, option);
 
 observer.observe(secone);
+
 
 // position: relative;
 // overflow: hidden;

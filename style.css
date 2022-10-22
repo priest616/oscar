@@ -124,7 +124,7 @@ header nav ul li {
   }
 }
 .fsctsec {
-  height: 95vh;
+  height: 85vh;
   margin: 2.5%;
   width: 95%;
   background-color: aqua;
@@ -132,14 +132,14 @@ header nav ul li {
 }
 .fsctsec .dispimg1 {
   position: relative;
-  height: 35vh;
+  height: 30vh;
   width: 100%;
   background-color: bisque;
   margin-bottom: 1vh;
 }
 .fsctsec .dispimg1 .intxt1 {
   position: absolute;
-  height: 35vh;
+  height: 30vh;
   width: 100%;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
 }
@@ -162,14 +162,14 @@ header nav ul li {
 }
 .fsctsec .dispimg0 .dispimg3 {
   position: relative;
-  height: 30vh;
+  height: 28vh;
   width: 49%;
   background-color: bisque;
   display: inline-block;
 }
 .fsctsec .dispimg0 .dispimg3 .intxt3 {
   position: absolute;
-  height: 30vh;
+  height: 28vh;
   width: 100%;
   background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
 }
