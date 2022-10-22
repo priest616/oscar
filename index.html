@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <header>
+        <button class="mobile-nav" aria-expanded="false">
+            <span class="sr-only">
+                menu
+            </span>
+        </button>
+        <div class="logodv">
+            <h1>
+                logo
+            </h1>
+        </div>
+        <div class="searchcon">
+            <div class="searchconmain">
+
+            </div>
+        </div>
+        <nav>
+            <ul class="mobilelst" data-visible="false">
+                <li>home</li>
+                <li>poetry</li>
+                <li>lifestyle</li>
+                <li>series</li>
+                <li>travel</li>
+                <li>review</li>
+                <li>gallery</li>
+                <div class="topspace">
+                    <h1>
+                        SUBSCRIBED?
+                    </h1>
+                    <P>
+                        No spams here :-)
+                    </P>
+                    <form action="#">
+                        <input type="text">
+                        <button>subscribe</button>
+                    </form>
+                </div>
+                <div class="iconscon">
+                    <div class="iconit"></div>
+                    <div class="iconit"></div>
+                    <div class="iconit"></div>
+                    <div class="iconit"></div>
+                    <div class="iconit"></div>
+                    <div class="iconit"></div>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <section class="fsctsec">
+        <div class="dispimg1">
+            <div class="intxt1">
+                <div class="actuals">
+                    <div class="slidefromdown">
+                        <p class="textblue">
+                            title of genre
+                        </p>
+                        <h4 class="colorwhite">
+                            title of work
+                        </h4>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="dispimg2">
+            <div class="intxt2">
+                <div class="actuals">
+                    <div class="slidefromdown" style="animation-delay: 0.5s;">
+                        <p class="textblue">
+                            title of genre
+                        </p>
+                        <h4 class="colorwhite">
+                            title of work
+                        </h4>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dispimg0">
+            <div class="dispimg3">
+                <div class="intxt3">
+                    <div class="actuals">
+                        <div class="slidefromdown" style="animation-delay: 1s;">
+                            <p class="textblue">
+                                title of genre
+                            </p>
+                            <h4 class="colorwhite">
+                                title of work
+                            </h4>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+            <div class="dispimg3" >
+                <div class="intxt3">
+                    <div class="actuals">
+                        <div class="slidefromdown" style="animation-delay: 1s;">
+                            <p class="textblue">
+                                title of genre
+                            </p>
+                            <h4 class="colorwhite">
+                                title of work
+                            </h4>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="title2">
+            <div class="title21 textblue">
+                <p>lifestyle</p>
+            </div>
+            <div class="title22">
+                <span>relationships</span>
+                <span>relationships</span>
+                <span>slide right!!</span>
+                <span>relationships</span>
+                <span>relationships</span>
+                <span>relationships</span>
+                <span>relationships</span>
+            </div>
+            
+        </div>
+        <hr class="sec1hr">
+    </section>
+    <div style="height: 200px;">
+
+    </div>
+    <script>
+        window.onload = function() {
+    setTimeout(() => {
+        const stylein = document.querySelectorAll('.slidefromdown');
+        for (let i = 0; i < stylein.length; i++) {
+            const element = stylein[i];
+            element.classList.add('slideops');
+        }
+    }, 300);
+  };
+    </script>
+</body>
+</html>
