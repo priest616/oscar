@@ -112,7 +112,7 @@ header nav ul li {
     transition: 350ms ease-out;
   }
   .mobile-nav[aria-expanded=true] {
-    background: transparent;
+    color: white;
     left: 55% !important;
   }
 }
