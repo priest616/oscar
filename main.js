@@ -35,6 +35,27 @@ const observer = new IntersectionObserver(function (entries, observer) {
 observer.observe(secone);
 
 
-// position: relative;
-// overflow: hidden;
-// top: -100px;
+
+const menuem = document.querySelector('.logodv');
+
+option = {
+    root: null,
+    threshold: 0, //how much of it is visible
+    rootMargin: "30px" //sets mergin
+};
+
+const observer1 = new IntersectionObserver(function (entries, observer) {
+    entries.forEach(entry => {
+        if (!entry.isIntersecting) {
+            document.getElementById('selectM').classList.add('cback')
+            return;
+        }else{
+            document.getElementById('selectM').classList.remove('cback')
+
+        }
+        
+    })
+}, option);
+
+observer1.observe(menuem);
+

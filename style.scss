@@ -9,6 +9,7 @@ body{
     &::-webkit-scrollbar{
         display: none;
     }
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
 header{
@@ -18,20 +19,7 @@ header{
     height: 70px;
     .logodv{
         padding: 10px;
-        margin-left: auto;
-    }
-    .searchcon{
-        height: 70px;
-        width: 70px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .searchconmain{
-            width: 30px;
-            height: 30px;
-            border-radius: 15px;
-            background: black;
-        }
+        margin: auto;
     }
     nav{
         height: 40px;
@@ -76,7 +64,8 @@ header{
                 align-content: flex-start;
                 transform: translateX(-100%);
                 transition: 350ms ease-out;
-                background: purple;
+                background: black;
+                color: white;
                 li{
                     text-transform: capitalize;
                 }
@@ -111,102 +100,140 @@ header{
         }
     }
     .mobile-nav{
+        text-transform: uppercase;
+        background: transparent;
+        border: none;
         display: block;
-        position: absolute;
+        position: fixed;
         z-index: 666;
-        background-color: aqua;
         width: 40px;
+        padding-right: 50px;
+        height: 40px;
         aspect-ratio: 1;
-        top: 10px;
-        left: 20px;
+        top: 18px;
+        left: 22px;
         transition: 350ms ease-out;
     }
     .mobile-nav[aria-expanded=true]{
-        background: black;
+        background: transparent;
         left: 55% !important;
     }    
 
 }
-
-.fsctsec{
-    height: 85vh;
-    margin: 2.5%;
-    width: 95%;
-    background-color: aqua;
-    position: relative;
-    .dispimg1{
+.bars{
+    z-index: 65;
+    top: 36px;
+    left: 70px;
+    position: fixed;
+    display: block;
+    height: 3px;
+    width: 25px;
+    background: blue;
+    border-radius: 5px;
+    &::after{
+        content: "";
+        display: block;
         position: relative;
-        height: 30vh;
-        width: 100%;
-        background-color: bisque;
-        margin-bottom: 1vh;
-        .intxt1{
-            position: absolute;
-            height: 30vh;
-            width: 100%;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
-        }
-    
+        height: 3px;
+        width: 20px;
+        background: blue;
+        top: 2px;
+        border-radius: 5px;
     }
-    .dispimg2{
+    &::before{
+        content: "";
+        display: block;
         position: relative;
-        height: 25vh;
-        width: 100%;
-        background-color: bisque;
-        margin-bottom: 1vh;
-        .intxt2{
-            position: absolute;
-            height: 25vh;
-            width: 100%;
-            background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
-        }
-    
-    }
-    .dispimg0{
-        display: flex;
-        justify-content: space-between;
-        .dispimg3{
-            position: relative;
-            height: 28vh;
-            width: 49%;
-            background-color: bisque;
-            display: inline-block;
-            .intxt3{
-                position: absolute;
-                height: 28vh;
-                width: 100%;
-                background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
-            }
-        
-        }
-    
-    }
-
-    .dispimg{
-        position: relative;
-        .intxt{
-            position: absolute;
-        }
+        height: 3px;
+        width: 25px;
+        background: blue;
+        bottom: 5px;
+        border-radius: 5px;
     }
 
 }
 
-.actuals{
-    height: 100%;
-    margin-bottom: auto;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-}
-.slidefromdown{
-    opacity: 0;
-}
+
 .slidefromside{
     animation: slidefromside;
-    animation-duration: 2s;
+    animation-duration: 1s;
     animation-fill-mode: forwards;
 
 }
+.dsplaysec{
+    display: flex;
+    flex-direction: column;
+    margin: 2.5%;
+    width: 95%;
+    .dispcon{
+        position: relative;
+        height: 50vh;
+        width: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        .txtdiv{
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+            top: 0;
+            .somedisc{
+                position: absolute;
+                bottom: 50px;
+                padding: 10px;
+                h1{
+                    color: rgb(0, 0, 0);
+                    text-transform: capitalize;
+                }
+                p{
+                    color: white;
+                }
+            }
+            .btmtxt{
+                position: absolute;
+                bottom: 0;
+                p{
+                    padding: 5px;
+                    background: blue;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+.cback{
+    color: white;
+    background-color: black;
+    padding: 3px;
+}
+
+.otherp{
+    
+    padding-top: 10px;
+    display: flex;
+    gap: 3px;
+    height: auto;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    &::-webkit-scrollbar{
+        display: none;
+    }
+
+    div{
+        width: 150px;
+        height: 120px;
+        flex-shrink: 0;
+        display: inline-block;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
 
 @keyframes slidefromside{
     0%{
@@ -220,29 +247,11 @@ header{
 
 }
 
-.slideops{
-    animation: slidefromdown;
-    animation-duration: 2s;
-    animation-fill-mode: forwards;
 
-}
-
-@keyframes slidefromdown {
-    0%{
-        transform: translateY(-100%);
-        opacity: 0;
-    }
-    100%{
-        transform: translateY(0%);
-        opacity: 1;
-    }
-
-}
 .no-scroll{
     overflow: hidden;
 }
 .title2{
-    padding-top: 40px;
     margin: 2.5%;
     width: 95%;
     display: flex;
@@ -252,7 +261,10 @@ header{
         opacity: 0;
         padding: 5px;
         width: auto;
-        margin-right: 30px;
+        margin-right: 15px;
+        p{
+            white-space: nowrap;
+        }
     }
     .title22{
         display: flex;
