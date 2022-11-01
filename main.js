@@ -6,11 +6,11 @@ navBtn.addEventListener('click', ()=>{
     if (visibility == 'false') {
         nalst.setAttribute('data-visible', true);
         navBtn.setAttribute('aria-expanded', true);
-        document.body.classList.add('no-scroll')
+        document.body.classList.add('no-scroll');
     }else{
         nalst.setAttribute('data-visible', false);
         navBtn.setAttribute('aria-expanded', false);
-        document.body.classList.remove('no-scroll')
+        document.body.classList.remove('no-scroll');
     }
 })
 
@@ -59,3 +59,17 @@ const observer1 = new IntersectionObserver(function (entries, observer) {
 
 observer1.observe(menuem);
 
+
+const slidethis = document.getElementById('slidethis');
+
+slidethis.addEventListener('touchstart',e => (startpos = e.targetTouches[0].clientX));
+slidethis.addEventListener('touchmove',e => (moved = e.targetTouches[0].clientX));
+slidethis.addEventListener('touchend', function (e) {
+    if (moved) {
+        if (startpos-moved > 40) {
+            nalst.setAttribute('data-visible', false);
+            navBtn.setAttribute('aria-expanded', false);
+            document.body.classList.remove('no-scroll');
+        }
+    }
+});
